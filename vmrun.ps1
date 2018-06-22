@@ -69,7 +69,7 @@ function execStart ($vmname) {
     $targetVM = existVM($vmname)
     if ($targetVM) {
         Write-Host "Start `"$targetVM`""
-        # &$vmrun start $targetVM nogui
+        &$vmrun start $targetVM nogui
     } else {
         Write-Host "$vmname does not exist!"
         printHelp
